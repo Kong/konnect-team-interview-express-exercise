@@ -26,8 +26,7 @@
       "babel-jest": "^25.3.0",
       "eslint": "7.9.0",
       "nodemon": "^2.0.13",
-      "ts-node": "3.3.0",
-      "typescript": "3.3.3333"
+      "ts-node": "3.3.0"
    },
    "dependencies": {
       "@types/jsonfile": "^5.0.0",

@@ -2,7 +2,7 @@
 
 ## Tech Stack
 
-- NodeJs <=12.22 (tested on v12.22.6)
+- NodeJs <=12.22 (tested on v12.22.6, v16)
 - Express
 - Typeorm
 

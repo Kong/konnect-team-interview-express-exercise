@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import { getConnection } from 'typeorm'
 
 import {DB_CONNECTION_NAME} from '../index'
-import { EndpointResponse } from '../controller/dto/default.dto'
+import { EndpointResponse } from './dto/default.dto'
 
 export class HealthController {
 	static async getOne (req: Request, res:Response, next: NextFunction): Promise<void> {
