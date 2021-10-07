@@ -1,0 +1,45 @@
+{
+   "name": "konnect-backend-live-excercise",
+   "version": "0.0.1",
+   "description": "Team Konnect Backend Interview Live Excercise",
+   "engines": {
+      "node": "<=12.22",
+      "yarn": "^1.22.0"
+   },
+   "scripts": {
+      "postinstall": "docker-compose up -d --force-recreate && yarn db:migration:run",
+      "typeorm": "npx -p typescript -p ts-node ts-node ./node_modules/typeorm/cli.js",
+      "serve": "nodemon src/index.ts",
+      "db:psql": "docker-compose exec postgres psql -U konnect -d konnect-backend-interview",
+      "db:migration:run": "yarn typeorm migration:run",
+      "lint": "yarn eslint --ext ts,js,tsx,jsx,vue ."
+   },
+   "author": "Kong Inc.",
+   "license": "Apache-2.0",
+   "devDependencies": {
+      "@babel/core": "^7.9.0",
+      "@babel/preset-env": "^7.9.5",
+      "@types/express": "^4.17.13",
+      "@types/node": "^8.0.29",
+      "@typescript-eslint/eslint-plugin": "4.1.1",
+      "@typescript-eslint/parser": "4.1.1",
+      "babel-jest": "^25.3.0",
+      "eslint": "7.9.0",
+      "nodemon": "^2.0.13",
+      "ts-node": "3.3.0",
+      "typescript": "3.3.3333"
+   },
+   "dependencies": {
+      "@types/jsonfile": "^5.0.0",
+      "chalk": "^4.0.0",
+      "class-validator": "^0.13.1",
+      "commander": "^5.0.0",
+      "express": "^4.17.1",
+      "jest": "^25.3.0",
+      "jsonfile": "^6.0.1", 
+      "pg": "^8.7.1",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "0.2.38",
+      "typescript": "^3.8.3"
+   }
+}

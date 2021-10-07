@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  postgres:
+    image: postgres:12.2
+    environment:
+      POSTGRES_USER: konnect
+      POSTGRES_PASSWORD: konnect
+      POSTGRES_DB: konnect-backend-interview
+    ports:
+      - 7432:5432

@@ -1,0 +1,21 @@
+{
+   "type": "postgres",
+   "host": "localhost",
+   "port": 7432,
+   "username": "konnect",
+   "password": "konnect",
+   "database": "konnect-backend-interview",
+   "synchronize": false,
+   "logging": false,
+   "entities": [
+      "./src/entity/**/*.ts"
+   ],
+   "migrations": [
+      "./src/migration/**/*.ts"
+   ],
+   "migrationsTableName": "orm_migrations",
+   "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration"
+   }
+}
