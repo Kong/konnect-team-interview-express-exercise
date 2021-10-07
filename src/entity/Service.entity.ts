@@ -3,11 +3,8 @@ import {
     PrimaryGeneratedColumn,
     Column,
     CreateDateColumn,
-    UpdateDateColumn,
-    OneToMany,
+    UpdateDateColumn
 } from "typeorm"
-
-import { Version } from './Version.entity'
 
 @Entity()
 export class Service {
@@ -26,10 +23,4 @@ export class Service {
 
     @Column()
     description: string;
-
-    @OneToMany(
-        () => Version,
-        (v: Version) => v.service
-      )
-    versions: Version[];
 }

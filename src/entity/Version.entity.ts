@@ -4,11 +4,7 @@ import {
 	Column,
 	CreateDateColumn,
 	UpdateDateColumn,
-	ManyToOne,
-	JoinColumn,
 } from "typeorm"
-
-import { Service } from './Service.entity'
 
 @Entity()
 export class Version {
@@ -20,13 +16,6 @@ export class Version {
 
     @UpdateDateColumn({ type: 'timestamptz', nullable: true })
     updated_at?: Date
-
-		@JoinColumn({name: 'service_id'})
-    @ManyToOne(
-        () => Service,
-        (s: Service) => s.versions
-      )
-    service: Service;
 
 		@Column()
 		name: string
