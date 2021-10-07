@@ -8,7 +8,7 @@ import {
 	JoinColumn,
 } from "typeorm"
 
-import { Service } from './Services.entity'
+import { Service } from './Service.entity'
 
 @Entity()
 export class Version {
